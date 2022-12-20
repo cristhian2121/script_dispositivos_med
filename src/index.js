@@ -45,7 +45,7 @@ async function updateRow(data) {
 
         const newDevice = {
           ...register,
-          precioVentaBase: newPrecioBase || data[i].precioVentaBase,
+          precioVentaBase: newPrecioBase || +data[i].precioVentaBase,
           descripcion: newDescripcion || data[i].descripcion
         }
 
@@ -56,7 +56,19 @@ async function updateRow(data) {
       }
 
     } else {
+      // insert
       notExists++
+      // await dispositivosMedicos.insert({
+      //   descripcion: data[i].descripcion || "",
+      //   codigo: data[i].codigo || "",
+      //   precioCompra: 0,
+      //   precioVentaBase: +data[i].precioVentaBase,
+      //   creatorID: "SALUD ELECTRONICA",
+      //   createdAt: new Date(),
+      //   updaterID: "SALUD ELECTRONICA",
+      //   updatedAt: new Date(),
+      //   isActive: true
+      // })
       console.log("it's not exits", data[i]._id, data[i].codigo);
     }
   }
