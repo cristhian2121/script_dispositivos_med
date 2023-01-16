@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"start": "node ./src/index.js"
+	},
+	"dependencies": {
+		"csv-parse": "^5.3.3",
+		"dotenv": "^16.0.3",
+		"mongodb": "^4.13.0"
+	}
+}

@@ -69,7 +69,7 @@ async function updateRow(data) {
       //   updatedAt: new Date(),
       //   isActive: true
       // })
-      console.log("it's not exits", data[i]._id, data[i].codigo);
+      console.log("it's not exits", data[i].codigo);
     }
   }
 
